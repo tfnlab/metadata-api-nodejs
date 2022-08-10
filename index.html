@@ -28,7 +28,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     function callTFNLab() {
-      var urlString =  "download.jsp?shirt=0&body=0&smile=" + document.getElementById("smile").value + "&gum=0&lazers=0&hats=0&earring=0&chain=0";
+      var urlString =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=0&lazers=0&hats=0&earring=0&chain=0";
       document.getElementById("imgfile").src = urlString;
 //      xhttp.open("GET", urlString, true);
 //      xhttp.send();
@@ -47,11 +47,21 @@
 
   <div class="input-group">
     <select name="smile" id="smile" class="form-select" >
-     <option >select</option>
+     <option >select smile</option>
      <option value="0"  >Plain</option>
      <option value="1"  >Red</option>
      <option value="2"  >Yellow</option>
     </select>
+  </div>
+  <div class="input-group">
+    <select name="shirt" id="shirt" class="form-select" >
+     <option >select shirt</option>
+     <option value="0"  >Plain</option>
+     <option value="1"  >Red</option>
+     <option value="2"  >Yellow</option>
+    </select>
+  </div>
+  <div class="input-group">
     <span class="input-group-btn">
      <input type="submit" value="Submit" class="btn btn-primary" onclick="callTFNLab()" />
     </span>
