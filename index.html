@@ -28,30 +28,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     function callTFNLab() {
-      var newLine = '\r\n';
-      var newLineOnly = '\n';
-      var newLineTwo = 'n\n';
-      var newLineTree = '\\n';
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var response =   this.responseText;
-          response = response.trim();
-          response = response.replaceAll(newLineTree, '');
-          response = response.replaceAll(newLineOnly, '');
-          response = response.replaceAll(newLine, '');
-          response = response.replaceAll(newLineTwo, '');
-          if(response.startsWith("n")){
-              response = response.substring(1, response.length());
-          }
-          document.getElementById("aichatbot").innerHTML = document.getElementById("aichatbot").innerHTML + newLine + "TFNLab: " + response ;
-          var textarea = document.getElementById('aichatbot');
-          textarea.scrollTop = textarea.scrollHeight;
-        }
-      };
       var urlString =  "download.jsp?shirt=0&body=0&smile=" + document.getElementById("smile").value + "&gum=0&lazers=0&hats=0&earring=0&chain=0";
-      xhttp.open("GET", urlString, true);
-      xhttp.send();
+      document.getElementById("imgfile").src = urlString;
+//      xhttp.open("GET", urlString, true);
+//      xhttp.send();
       //alert("Hello! I am an alert box!!" + urlString);
     }
   </script>
@@ -73,10 +53,10 @@
      <option value="2"  >Yellow</option>
     </select>
     <span class="input-group-btn">
-     <input type="submit" value="NEXT" class="btn btn-info">
+     <input type="submit" value="Submit" class="btn btn-primary" onclick="callTFNLab()" />
     </span>
   </div>
-  <img src="tmp/0.png" />
+  <img src="https://play.tfnlab.com/download.jsp?shirt=0&body=0&smile=0&gum=0&lazers=0&hats=0&earring=0&chain=0" id="imgfile" />
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
