@@ -13,7 +13,7 @@
       String stdout = IOUtils.toString(p.getInputStream(), Charset.defaultCharset());
       ServletContext cntx= request.getServletContext();
       // Get the absolute path of the image
-      String filename = cntx.getRealPath("../images/0.png");
+      String filename = "/opt/tomcat/webapps/images/0.png";
       // retrieve mimeType dynamically
       String mime = cntx.getMimeType(filename);
       if (mime == null) {
