@@ -8,12 +8,12 @@
       cmdarg = cmdarg + request.getParameter("hats") + " ";
       cmdarg = cmdarg + request.getParameter("earring") + " ";
       cmdarg = cmdarg + request.getParameter("chain") + " ";
-      Process p = new ProcessBuilder("ruby", "/opt/tomcat/webapps/ROOT/tfnlab.rb", cmdarg, "").start();
+      Process p = new ProcessBuilder("ruby", "/opt/tomcat/webapps/tfnlab.rb", cmdarg, "").start();
       String stderr = IOUtils.toString(p.getErrorStream(), Charset.defaultCharset());
       String stdout = IOUtils.toString(p.getInputStream(), Charset.defaultCharset());
       ServletContext cntx= request.getServletContext();
       // Get the absolute path of the image
-      String filename = cntx.getRealPath("0.png");
+      String filename = cntx.getRealPath("../images/0.png");
       // retrieve mimeType dynamically
       String mime = cntx.getMimeType(filename);
       if (mime == null) {
