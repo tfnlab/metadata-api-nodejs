@@ -15,6 +15,7 @@
           function callTFNLab() {
             var urlString =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=" + document.getElementById("gum").value + "&lazers=" + document.getElementById("lazers").value + "&hats=" + document.getElementById("hats").value + "&earring=" + document.getElementById("earring").value + "&chain=" + document.getElementById("chain").value ;
 
+            alert("Hello! I am an alert box!!" + urlString);
             xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
                 var urlStringTwo =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=" + document.getElementById("gum").value + "&lazers=" + document.getElementById("lazers").value + "&hats=" + document.getElementById("hats").value + "&earring=" + document.getElementById("earring").value + "&chain=" + document.getElementById("chain").value ;
