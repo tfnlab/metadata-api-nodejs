@@ -1,9 +1,10 @@
 <%@ page language="java" import="org.apache.commons.io.IOUtils,org.apache.commons.io.output.*,java.nio.charset.Charset,java.io.*,java.util.*,java.awt.image.BufferedImage,javax.imageio.ImageIO,java.io.OutputStream,java.io.FileInputStream,java.io.File"%>
 <%
-      String filename = "/opt/tomcat/webapps/images/" + request.getParameter("shirt") + "_"  + request.getParameter("smile") + "_"  + request.getParameter("gum") + "_" + request.getParameter("lazers") + "_" + request.getParameter("hats") + "_" + request.getParameter("earring") + "_" + request.getParameter("chain") +".png";
+      String filename = "/opt/tomcat/webapps/images/" + request.getParameter("shirt") + "_"  + request.getParameter("body") + "_"  + request.getParameter("smile") + "_"  + request.getParameter("gum") + "_" + request.getParameter("lazers") + "_" + request.getParameter("hats") + "_" + request.getParameter("earring") + "_" + request.getParameter("chain") +".png";
       File file = new File(filename);
       if(!file.exists()){
         String cmdarg = request.getParameter("shirt") + " ";
+        cmdarg = cmdarg + request.getParameter("body") + " ";
         cmdarg = cmdarg + request.getParameter("smile") + " ";
         cmdarg = cmdarg + request.getParameter("gum") + " ";
         cmdarg = cmdarg + request.getParameter("lazers") + " ";
