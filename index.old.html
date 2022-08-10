@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TFNLab</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function callTFNLab() {
+      var urlString =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=0&lazers=0&hats=0&earring=0&chain=0";
+      document.getElementById("imgfile").src = urlString;
+//      xhttp.open("GET", urlString, true);
+//      xhttp.send();
+      //alert("Hello! I am an alert box!!" + urlString);
+    }
+  </script>
+  <!-- =======================================================
+  * Template Name: Avilon - v4.7.0
+  * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <div class="input-group">
+    <select name="smile" id="smile" class="form-select" >
+     <option >select smile</option>
+     <option value="0"  >Plain</option>
+     <option value="1"  >Red</option>
+     <option value="2"  >Yellow</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <select name="shirt" id="shirt" class="form-select" >
+     <option >select shirt</option>
+     <option value="0"  >Plain</option>
+     <option value="1"  >Red</option>
+     <option value="2"  >Yellow</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <span class="input-group-btn">
+     <input type="submit" value="Submit" class="btn btn-primary" onclick="callTFNLab()" />
+    </span>
+  </div>
+  <img src="https://play.tfnlab.com/download.jsp?shirt=0&body=0&smile=0&gum=0&lazers=0&hats=0&earring=0&chain=0" id="imgfile" width="100%"/>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+</body>
+
+</html>
