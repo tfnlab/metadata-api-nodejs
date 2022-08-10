@@ -47,27 +47,6 @@
                        <option value="5"  >Blue</option>
                        <option value="6"  >Pink</option>
                       </select>
-                </div>
-            </div>
-            <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
-                <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item"><a class="nav-link" href="https://opensea.io/collection/tfnlab">OpenSea</a></li>
-                                <li class="nav-item"><a class="nav-link" href="https://etherscan.io/token/0xa881bf6e9618ac86502a64e83010c88869aa0d97">Etherscan</a></li>
-                                <li class="nav-item"><a class="nav-link" href="https://twitter.com/tfnlab">Twitter</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Page content-->
-                <div class="container-fluid">
-                    <div class="input-group">
                       <select name="hats" id="hats" class="form-select" >
                        <option value="0"  >select hat</option>
                        <option value="0"  >None</option>
@@ -89,8 +68,6 @@
                        <option value="5"  >Miami</option>
                        <option value="6"  >British</option>
                       </select>
-                    </div>
-                    <div class="input-group">
                       <select name="gum" id="gum" class="form-select" >
                        <option value="0"  >select smile</option>
                        <option value="0"  >None</option>
@@ -110,7 +87,26 @@
                        <option value="2"  >Love</option>
                        <option value="3"  >Money</option>
                       </select>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="https://opensea.io/collection/tfnlab">OpenSea</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://etherscan.io/token/0xa881bf6e9618ac86502a64e83010c88869aa0d97">Etherscan</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://twitter.com/tfnlab">Twitter</a></li>
+                            </ul>
+                        </div>
                     </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
                     <div class="input-group">
                       <span class="input-group-btn">
                        <input type="submit" value="Generate" class="btn btn-primary" onclick="callTFNLab()" />
