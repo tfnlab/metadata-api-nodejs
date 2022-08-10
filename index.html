@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
           function callTFNLab() {
-            var urlString =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=0&lazers=" + document.getElementById("lazers").value + "&hats=" + document.getElementById("hats").value + "&earring=0&chain=0";
+            var urlString =  "download.jsp?shirt=" + document.getElementById("shirt").value + "&body=0&smile=" + document.getElementById("smile").value + "&gum=" + document.getElementById("gum").value + "&lazers=" + document.getElementById("lazers").value + "&hats=" + document.getElementById("hats").value + "&earring=" + document.getElementById("earring").value + "&chain=" + document.getElementById("chain").value ;
             document.getElementById("imgfile").src = urlString;
       //      xhttp.open("GET", urlString, true);
       //      xhttp.send();
@@ -79,6 +79,26 @@
                        <option value="2"  >Yellow</option>
                       </select>
                       <select name="lazers" id="lazers" class="form-select" >
+                       <option >select shirt</option>
+                       <option value="0"  >Plain</option>
+                       <option value="1"  >Red</option>
+                       <option value="2"  >Yellow</option>
+                      </select>
+                    </div>
+                    <div class="input-group">
+                      <select name="gum" id="gum" class="form-select" >
+                       <option >select smile</option>
+                       <option value="0"  >Plain</option>
+                       <option value="1"  >Red</option>
+                       <option value="2"  >Yellow</option>
+                      </select>
+                      <select name="earring" id="earring" class="form-select" >
+                       <option >select shirt</option>
+                       <option value="0"  >Plain</option>
+                       <option value="1"  >Red</option>
+                       <option value="2"  >Yellow</option>
+                      </select>
+                      <select name="chain" id="chain" class="form-select" >
                        <option >select shirt</option>
                        <option value="0"  >Plain</option>
                        <option value="1"  >Red</option>
