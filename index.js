@@ -32,7 +32,7 @@ app.get('/api/token/:token_id', function(req, res) {
       'earring': person.earring,
       'neckless': person.neckless
     },
-    'image': `${HOST}/images/${tokenId}.png`
+    'image': `${person.imgurl}`
   }
   res.send(data)
 })
