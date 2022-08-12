@@ -1,4 +1,4 @@
-const HOST = 'https://tfnlab.herokuapp.com'
+const HOST = 'https://moderndegenz.herokuapp.com'
 
 module.exports = {
   HOST
