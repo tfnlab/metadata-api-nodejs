@@ -24,13 +24,13 @@ app.get('/api/token/:token_id', function(req, res) {
   const data = {
     'name': tokenId,
     'attributes': {
-      'shirt': person.shirt,
-      'smile': person.smile,
-      'other': person.other,
-      'eyes': person.eyes,
-      'hat': person.hat,
-      'earring': person.earring,
-      'neckless': person.neckless
+      'Eyes': person.Eyes,
+      'Earring': person.Earring,
+      'Chain': person.Chain,
+      'Clothes': person.Clothes,
+      'Hat': person.Hat,
+      'Mouth': person.Mouth,
+      'ButtPlug': person.ButtPlug
     },
     'image': `${HOST}/images/${tokenId}.png`
   }
