@@ -32,7 +32,7 @@ app.get('/api/token/:token_id', function(req, res) {
       'Mouth': person.Mouth,
       'ButtPlug': person.ButtPlug
     },
-    'image': `${HOST}/images/logo.gif`
+    'image': `${person.imgurl}`
   }
   res.send(data)
 })
