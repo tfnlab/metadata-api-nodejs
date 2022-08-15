@@ -21,6 +21,10 @@ String charset = "UTF-8";
 Map<EncodeHintType, ErrorCorrectionLevel> hashMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 hashMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 
+
+Map<EncodeHintType, ErrorCorrectionLevel> hashMapprivate = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
+hashMapprivate.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+
 BitMatrix matrix = new MultiFormatWriter().encode(new String(str.getBytes(charset), charset), BarcodeFormat.QR_CODE, 200, 200);
 
 BitMatrix matrixprivate = new MultiFormatWriter().encode(new String(strprivate.getBytes(charset), charset), BarcodeFormat.QR_CODE, 200, 200);
@@ -43,5 +47,7 @@ MatrixToImageWriter.writeToFile(matrixprivate, pathprivate.substring(pathprivate
 //    outpng.close();
 //    in.close();
 %>
-<img src="meta.pub.jsp?key=<%=str%>" />
-<img src="meta.pub.jsp?key=<%=strprivate%>" />
+<%=str%><BR>
+<img src="meta.pub.jsp?key=<%=str%>" /><BR>
+<%=strprivate%><BR>
+<img src="meta.pub.jsp?key=<%=strprivate%>" /><BR>
