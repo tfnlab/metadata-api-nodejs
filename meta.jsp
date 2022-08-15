@@ -52,4 +52,4 @@ MatrixToImageWriter.writeToFile(matrixprivate, pathprivate.substring(pathprivate
 <%=strprivate%><BR>
 <img src="meta.pub.jsp?key=<%=strprivate%>" /><BR>
 
-<a href="https://play.tfnlab.com/meta.pdf.jsp?private=<%=str%>&public=<%=strprivate%>" >Download PDF</a>
+<a href="https://play.tfnlab.com/meta.pdf.jsp?private=<%=strprivate%>&public=<%=str%>" >Download PDF</a>
