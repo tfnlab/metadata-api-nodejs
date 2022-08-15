@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.Map,java.util.HashMap,java.io.IOException,com.google.zxing.BarcodeFormat,com.google.zxing.EncodeHintType,com.google.zxing.MultiFormatWriter,com.google.zxing.NotFoundException,com.google.zxing.WriterException,com.google.zxing.client.j2se.MatrixToImageWriter,com.google.zxing.common.BitMatrix,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,org.apache.commons.io.IOUtils,org.apache.commons.io.output.*,java.nio.charset.Charset,java.io.*,java.util.*,java.awt.image.BufferedImage,javax.imageio.ImageIO,java.io.OutputStream,java.io.FileInputStream,java.io.File"%>
+<%@ page language="java" import="java.io.*,java.util.*, javax.servlet.*, org.apache.commons.io.*, java.nio.charset.Charset,java.util.Map,java.util.HashMap,java.io.IOException,com.google.zxing.BarcodeFormat,com.google.zxing.EncodeHintType,com.google.zxing.MultiFormatWriter,com.google.zxing.NotFoundException,com.google.zxing.WriterException,com.google.zxing.client.j2se.MatrixToImageWriter,com.google.zxing.common.BitMatrix,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,org.apache.commons.io.IOUtils,org.apache.commons.io.output.*,java.nio.charset.Charset,java.io.*,java.util.*,java.awt.image.BufferedImage,javax.imageio.ImageIO,java.io.OutputStream,java.io.FileInputStream,java.io.File"%>
 <%
 //main() method
 //data that we want to store in the QR code
@@ -13,6 +13,11 @@ Map<EncodeHintType, ErrorCorrectionLevel> hashMap = new HashMap<EncodeHintType, 
 hashMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 //invoking the user-defined method that creates the QR code
 //generateQRcode(str, path, charset, hashMap, 200, 200);//increase or decrease height and width accodingly
+Process pweb3 = new ProcessBuilder("python3", "/var/lib/tomcat9/webapps/uploads/address.py").start();
+String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
+String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
+
+str = stdoutweb3.substring(stdoutweb3.indexOf("Address") + 9, stdoutweb3.length()).trim();
 
 BitMatrix matrix = new MultiFormatWriter().encode(new String(str.getBytes(charset), charset), BarcodeFormat.QR_CODE, 200, 200);
 MatrixToImageWriter.writeToFile(matrix, path.substring(path.lastIndexOf('.') + 1), new File(path));
