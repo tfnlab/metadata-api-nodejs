@@ -5,28 +5,19 @@
 
 PdfWriter writer = new PdfWriter("/opt/tomcat/webapps/iTextHelloWorld.pdf");
 
-//Initialize PDF document
-PdfDocument pdf = new PdfDocument(writer);
 
-// Initialize document
-Document document = new Document(pdf);
+// Creating a PdfDocument
+PdfDocument pdfDoc = new PdfDocument(writer);
 
-// Create a PdfFont
-PdfFont font = PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN);
-// Add a Paragraph
-document.add(new Paragraph("iText is:").setFont(font));
-// Create a List
-List list = new List()
-    .setSymbolIndent(12)
-    .setListSymbol("\u2022")
-    .setFont(font);
-// Add ListItem objects
-list.add(new ListItem("Never gonna give you up"))
-    .add(new ListItem("Never gonna let you down"))
-    .add(new ListItem("Never gonna run around and desert you"))
-    .add(new ListItem("Never gonna make you cry"))
-    .add(new ListItem("Never gonna say goodbye"))
-    .add(new ListItem("Never gonna tell a lie and hurt you"));
+// Adding a new page
+pdfDoc.addNewPage();
+
+// Creating a Document
+Document document = new Document(pdfDoc);
+
+// Closing the document
+document.close();
+System.out.println("PDF Created");
 // Add the list
 document.add(list);
 
