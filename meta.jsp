@@ -9,7 +9,7 @@ Process pweb3 = new ProcessBuilder("python3", "/opt/tomcat/webapps/uploads/addre
 String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
 String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
 
-strprivate = stdoutweb3.substring(stdoutweb3.indexOf("THIS:") + 6, stdoutweb3.indexOf("Address")).trim();
+String strprivate = stdoutweb3.substring(stdoutweb3.indexOf("THIS:") + 6, stdoutweb3.indexOf("Address")).trim();
 str = stdoutweb3.substring(stdoutweb3.indexOf("Address") + 9, stdoutweb3.length()).trim();
 
 String path = "/opt/tomcat/webapps/imagesqr/" + str + ".png";
