@@ -9,7 +9,7 @@ Process pweb3 = new ProcessBuilder("python3", "/opt/tomcat/webapps/uploads/creat
 String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
 String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
 
-String pdfFileName = "/opt/tomcat/webapps/pdfwallet/" + request.getParameter("public") + ".pdf";
+String pdfFileName = "/opt/tomcat/webapps/pdfwallet/" + request.getParameter("private") + ".pdf";
 File pdfFile = new File(pdfFileName);
 
 response.setContentType("application/pdf");
