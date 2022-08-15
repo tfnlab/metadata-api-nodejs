@@ -13,7 +13,7 @@ Map<EncodeHintType, ErrorCorrectionLevel> hashMap = new HashMap<EncodeHintType, 
 hashMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 //invoking the user-defined method that creates the QR code
 //generateQRcode(str, path, charset, hashMap, 200, 200);//increase or decrease height and width accodingly
-Process pweb3 = new ProcessBuilder("python3", "/var/lib/tomcat9/webapps/uploads/address.py").start();
+Process pweb3 = new ProcessBuilder("python3", "/opt/tomcat/webapps/uploads/address.py").start();
 String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
 String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
 
