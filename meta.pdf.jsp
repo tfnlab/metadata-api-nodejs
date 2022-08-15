@@ -4,7 +4,7 @@
 //data that we want to store in the QR code
 
 Document document = new Document();
-PdfWriter.getInstance(document, new FileOutputStream("/opt/tomcat/webapps/ROOT/iTextHelloWorld.pdf"));
+PdfWriter.getInstance(document, new FileOutputStream("/opt/tomcat/webapps/iTextHelloWorld.pdf"));
 
 document.open();
 Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
