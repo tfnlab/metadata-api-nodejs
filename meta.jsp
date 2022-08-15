@@ -17,8 +17,6 @@ hashMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 BitMatrix matrix = new MultiFormatWriter().encode(new String(str.getBytes(charset), charset), BarcodeFormat.QR_CODE, 200, 200);
 MatrixToImageWriter.writeToFile(matrix, path.substring(path.lastIndexOf('.') + 1), new File(path));
 
-//prints if the QR code is generated
-System.out.println("QR Code created successfully.");
 
 File file = new File(path);
 ServletContext cntx= request.getServletContext();
