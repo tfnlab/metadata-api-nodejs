@@ -3,7 +3,7 @@
 //main() method
 //data that we want to store in the QR code
 
-String path = "/opt/tomcat/webapps/imagesqr/" + request.getParameter("public_key") + ".png";
+String path = "/opt/tomcat/webapps/imagesqr/" + request.getParameter("key") + ".png";
 //Encoding charset to be used
 File file = new File(path);
 ServletContext cntx= request.getServletContext();
