@@ -3,6 +3,12 @@
 //main() method
 //data that we want to store in the QR code
 
+
+String acct_address = request.getParameter("private") +  " " + request.getParameter("public");
+Process pweb3 = new ProcessBuilder("python3", "/var/lib/tomcat9/webapps/uploads/createpdf.py", "--arg1", acct_address).start();
+String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
+String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
+
 String pdfFileName = "/opt/tomcat/webapps/pdfwallet/GFG.pdf";
 File pdfFile = new File(pdfFileName);
 
