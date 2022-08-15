@@ -1,20 +1,19 @@
-<%@ page language="java" import="java.io.IOException,java.io.File,com.itextpdf.layout.element.Paragraph,com.itextpdf.layout.element.ListItem,com.itextpdf.layout.element.List,com.itextpdf.layout.Document,com.itextpdf.kernel.pdf.PdfWriter,com.itextpdf.kernel.pdf.PdfDocument,com.itextpdf.kernel.font.PdfFontFactory,com.itextpdf.kernel.font.PdfFont,com.itextpdf.io.font.constants.StandardFonts"%>
+<%@ page language="java" import="com.itextpdf.text.Font,com.itextpdf.text.FontFactory,com.itextpdf.kernel.pdf.PdfWriter,com.itextpdf.layout.Document,org.apache.commons.io.output.*,java.io.*,java.util.*, javax.servlet.*, org.apache.commons.io.*, java.nio.charset.Charset,java.util.Map,java.util.HashMap,java.io.IOException,com.google.zxing.BarcodeFormat,com.google.zxing.EncodeHintType,com.google.zxing.MultiFormatWriter,com.google.zxing.NotFoundException,com.google.zxing.WriterException,com.google.zxing.client.j2se.MatrixToImageWriter,com.google.zxing.common.BitMatrix,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,org.apache.commons.io.IOUtils,org.apache.commons.io.output.*,java.nio.charset.Charset,java.io.*,java.util.*,java.awt.image.BufferedImage,javax.imageio.ImageIO,java.io.OutputStream,java.io.FileInputStream,java.io.File"%>
 <%
 //main() method
 //data that we want to store in the QR code
 
-PdfWriter writer = new PdfWriter("/opt/tomcat/webapps/iTextHelloWorld.pdf");
+Document document = new Document();
+PdfWriter.getInstance(document, new FileOutputStream("/opt/tomcat/webapps/iTextHelloWorld.pdf"));
+
+document.open();
+Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+Chunk chunk = new Chunk("Hello World", font);
 
 
-// Creating a PdfDocument
-PdfDocument pdfDoc = new PdfDocument(writer);
 
-// Adding a new page
-pdfDoc.addNewPage();
 
-// Creating a Document
-Document document = new Document(pdfDoc);
-
+document.add(chunk);
 document.close();
  //     response.setContentLength((int)file.length());
 
