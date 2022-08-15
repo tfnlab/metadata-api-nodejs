@@ -5,7 +5,7 @@
 
 
 String acct_address = request.getParameter("private") +  " " + request.getParameter("public");
-Process pweb3 = new ProcessBuilder("python3", "/opt/tomcat/webapps/uploads/createpdf.py", "--arg1", request.getParameter("public")).start();
+Process pweb3 = new ProcessBuilder("python3", "/opt/tomcat/webapps/uploads/createpdf.py", "--arg1", request.getParameter("public"), "--arg2", request.getParameter("private")).start();
 String stderrweb3 = IOUtils.toString(pweb3.getErrorStream(), Charset.defaultCharset());
 String stdoutweb3 = IOUtils.toString(pweb3.getInputStream(), Charset.defaultCharset());
 
