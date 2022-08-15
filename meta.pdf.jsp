@@ -4,8 +4,7 @@
 //data that we want to store in the QR code
 
 String pdfFileName = "/opt/tomcat/webapps/pdfwallet/GFG.pdf";
-String contextPath = getServletContext().getRealPath(File.separator);
-File pdfFile = new File(contextPath + pdfFileName);
+File pdfFile = new File(pdfFileName);
 
 response.setContentType("application/pdf");
 response.addHeader("Content-Disposition", "attachment; filename=" + pdfFileName);
