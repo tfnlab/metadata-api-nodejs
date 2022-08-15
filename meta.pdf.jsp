@@ -15,13 +15,6 @@ pdfDoc.addNewPage();
 // Creating a Document
 Document document = new Document(pdfDoc);
 
-// Closing the document
-document.close();
-System.out.println("PDF Created");
-// Add the list
-document.add(list);
-
-//Close document
 document.close();
  //     response.setContentLength((int)file.length());
 
