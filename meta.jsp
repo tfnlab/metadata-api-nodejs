@@ -5,7 +5,7 @@
 
 String str= "THE HABIT OF PERSISTENCE IS THE HABIT OF VICTORY.";
 //path where we want to get QR Code
-String path = "/opt/tomcat/webapps/Quote.png";  
+String path = "/opt/tomcat/webapps/imagesqr/Quote.png";
 //Encoding charset to be used
 String charset = "UTF-8";
 Map<EncodeHintType, ErrorCorrectionLevel> hashMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
@@ -20,7 +20,18 @@ MatrixToImageWriter.writeToFile(matrix, path.substring(path.lastIndexOf('.') + 1
 //prints if the QR code is generated
 System.out.println("QR Code created successfully.");
 
-
+File file = new File(path);
+ServletContext cntx= request.getServletContext();
+// Get the absolute path of the image
+// retrieve mimeType dynamically
+String mime = cntx.getMimeType(path);
+if (mime == null) {
+  response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+  return;
+}
+response.setContentType(mime);
+BufferedImage image = ImageIO.read(path);
+ImageIO.write(image, "PNG", response.getOutputStream());
  //     response.setContentLength((int)file.length());
 
 //      FileInputStream in = new FileInputStream(file);
