@@ -3,18 +3,20 @@
 //main() method
 //data that we want to store in the QR code
 
-Document document = new Document();
-PdfWriter.getInstance(document, new FileOutputStream("/opt/tomcat/webapps/iTextHelloWorld.pdf"));
+String pdfFileName = "/opt/tomcat/webapps/pdfwallet/GFG.pdf";
+String contextPath = getServletContext().getRealPath(File.separator);
+File pdfFile = new File(contextPath + pdfFileName);
 
-document.open();
-Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
-Chunk chunk = new Chunk("Hello World", font);
+response.setContentType("application/pdf");
+response.addHeader("Content-Disposition", "attachment; filename=" + pdfFileName);
+response.setContentLength((int) pdfFile.length());
 
-
-
-
-document.add(chunk);
-document.close();
+FileInputStream fileInputStream = new FileInputStream(pdfFile);
+OutputStream responseOutputStream = response.getOutputStream();
+int bytes;
+while ((bytes = fileInputStream.read()) != -1) {
+  responseOutputStream.write(bytes);
+}
  //     response.setContentLength((int)file.length());
 
 //      FileInputStream in = new FileInputStream(file);
