@@ -31,7 +31,7 @@ BitMatrix matrixprivate = new MultiFormatWriter().encode(new String(strprivate.g
 
 MatrixToImageWriter.writeToFile(matrix, path.substring(path.lastIndexOf('.') + 1), new File(path));
 
-MatrixToImageWriter.writeToFile(matrixprivate, pathprivate.substring(pathprivate.lastIndexOf('.') + 1), new File(path));
+MatrixToImageWriter.writeToFile(matrixprivate, pathprivate.substring(pathprivate.lastIndexOf('.') + 1), new File(pathprivate));
 
  //     response.setContentLength((int)file.length());
 
