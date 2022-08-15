@@ -28,7 +28,7 @@ if (mime == null) {
   return;
 }
 response.setContentType(mime);
-BufferedImage image = ImageIO.read(path);
+BufferedImage image = ImageIO.read(file);
 ImageIO.write(image, "PNG", response.getOutputStream());
  //     response.setContentLength((int)file.length());
 
