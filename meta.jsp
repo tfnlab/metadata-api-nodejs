@@ -91,8 +91,11 @@ MatrixToImageWriter.writeToFile(matrixprivate, pathprivate.substring(pathprivate
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
+                  <BR><BR>
+                  Public Key<BR>
                   <%=str%><BR>
                   <img src="meta.pub.jsp?key=<%=str%>" /><BR>
+                  Private Key <BR>
                   <%=strprivate%><BR>
                   <img src="meta.pub.jsp?key=<%=strprivate%>" /><BR>
 
