@@ -23,6 +23,7 @@ app.get('/api/token/:token_id', function(req, res) {
   const person = db[tokenId]
   const data = {
     'name': tokenId,
+    'animation_url': `${person.imgurl}`,
     'attributes': {
       'Eyes': person.Eyes,
       'Earring': person.Earring,
@@ -32,8 +33,7 @@ app.get('/api/token/:token_id', function(req, res) {
       'Mouth': person.Mouth,
       'ButtPlug': person.ButtPlug
     },
-    'image': `${person.imgurl}`,
-    'animation_url': `${person.imgurl}`
+    'image': `${person.imgurl}`
   }
   res.send(data)
 })
