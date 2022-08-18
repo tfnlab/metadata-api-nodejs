@@ -11,7 +11,7 @@ module.exports = {
   },
   "1": {
     "Eyes": "Bored",
-    "imgurl": "https://play.tfnlab.com/download.mdyc.jsp?buttplug=2&chain=2&clothes=0&earring=0&eyes=0&hat=2&mouth=1",
+    "imgurl": "https://play.tfnlab.com/glb/house.export.glb",
     "Earring": "Silver",
     "Chain": "Figaro",
     "Clothes": "Sailor Shirt",
@@ -21,7 +21,7 @@ module.exports = {
   },
   "2": {
     "Eyes": "Closed",
-    "imgurl": "https://play.tfnlab.com/download.mdyc.jsp?buttplug=0&chain=0&clothes=0&earring=1&eyes=1&hat=2&mouth=0",
+    "imgurl": "https://play.tfnlab.com/glb/house.glb",
     "Earring": "Gold",
     "Chain": "Box",
     "Clothes": "Sailor Shirt",
@@ -31,7 +31,7 @@ module.exports = {
   },
   "3": {
     "Eyes": "Closed",
-    "imgurl": "https://play.tfnlab.com/download.mdyc.jsp?buttplug=1&chain=1&clothes=0&earring=0&eyes=1&hat=0&mouth=0",
+    "imgurl": "https://play.tfnlab.com/glb/house.refresh.glb",
     "Earring": "Silver",
     "Chain": "Rope",
     "Clothes": "Sailor Shirt",
