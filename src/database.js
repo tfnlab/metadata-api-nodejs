@@ -1,7 +1,7 @@
 module.exports = {
   "0": {
     "Eyes": "Closed",
-    "imgurl": "https://play.tfnlab.com/download.mdyc.jsp?buttplug=0&chain=0&clothes=2&earring=1&eyes=1&hat=1&mouth=0",
+    "imgurl": "https://play.tfnlab.com/glb/house.glb",
     "Earring": "Gold",
     "Chain": "Box",
     "Clothes": "Pimp Coat",
